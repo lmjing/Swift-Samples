@@ -8,10 +8,10 @@ var varWithType : Int = 20
 intVar = 30
 print(intVar)
 
-// 실수형 변수 선언 - 타입 선언 생략 시 실수형 기본 타입은 Float
-var floatVar = 3.14
+// 실수형 변수 선언 - 타입 선언 생략 시 실수형 기본 타입 Double
+var doubleVar = 3.14
 // Double 타입으로 변수 선언
-var doubleVar : Double = 3.14
+var floatVar : Float = 3.14
 
 var intVar2 : Int
 intVar2 = 10
