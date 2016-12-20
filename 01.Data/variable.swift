@@ -27,7 +27,7 @@ print(intVar2)
 // error : cannot convert value of type 'Double' to specified type 'Int'
 //var intVar3 : Int = 3.14 
 
-// error: cannot assign value of type 'Double' to type 'Int'
+// error: cannot assign value of type 'Float' to type 'Int'
 // var floatVar = 3.14
 //intVar = floatVar
 
