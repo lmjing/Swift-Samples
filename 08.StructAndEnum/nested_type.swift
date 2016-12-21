@@ -1,5 +1,5 @@
 /*
- * 타입 내장
+ * 타입 내장 - 중첩 사용 가능
  */
 
 struct Rectangle {
@@ -20,6 +20,7 @@ struct Rectangle {
    }
 }
 
+// '.'을 이용해 접근, 타입 내부 값을 먼저 생성한 후 Rectangle 생성
 let point = Rectangle.Point(x: 10, y: 10)
 print("Rectangle.Point : ", point)
 

@@ -1,5 +1,6 @@
 /*
  * Enum, Association
+ * 저장 프로퍼티 대신 연관하는 방식으로 값을 저장할 수 있음
  */
 
 enum ArrivalStatus {
