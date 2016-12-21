@@ -1,6 +1,9 @@
-//
-// 타입 변환
-//
+/*
+ * 타입 변환
+ * as : 확실할 때만 사용 가능
+ * as? : 항상 옵셔널 타입으로 변환, 변환 실패시 nil
+ * as! : 보통 타입으로 변환되지만 변환 실패시 런타임 에러
+ */
 
 let anyVal : Any = 3
 
@@ -15,9 +18,8 @@ let strVal1 = anyVal as? String // 변환 실패. nil
 
 // 옵셔널 바인딩
 if let intVal3 = anyVal as? Int {
-   print("변환 성공")
+    print("변환 성공 : ",intVal3)
 }
-
 
 // 클래스 상속
 class Animal {}

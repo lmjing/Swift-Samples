@@ -1,5 +1,5 @@
 /**
- * 타입 체크
+ * 타입 체크 : is
  */
 
 print("== Any 타입과 타입 체크")
@@ -9,9 +9,16 @@ if anyVal is Int {
    print("정수 타입")
 }
 
+anyVal = "hello"
+
+if anyVal is String{
+    print("문자열 타입")
+}
+
 
 //
 // 클래스 상속과 타입 체크
+// 부모 클래스 타입 역시 true
 //
 print("== 클래스 상속과 타입 체크")
 class Animal {

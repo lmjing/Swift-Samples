@@ -1,5 +1,6 @@
 //
 // Any 타입. 정수형과 문자열 값 대입
+// 모든 타입의 객체 다룰 수 있다.
 //
 
 var anyVar : Any = 3
@@ -31,6 +32,7 @@ print(anyVar, type(of:anyVar))
 
 //
 // AnyObject 타입
+// 레퍼런스 타입의 객체만 다룰 수 있다.
 //
 
 var anyObj : AnyObject
