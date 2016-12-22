@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Music{
+class Music : Playable{
     var title : String?
     var artist : String?
     var count : Int
@@ -17,9 +17,9 @@ class Music{
         //콘솔에 제목과 가수 출력, 재생 회수 증가
         if let t = title, let a = artist{
             count += 1
-            print("\(t) - \(a) \(count)번째 듣는중!")
+            print("🎧재생중 : \(t) - \(a) \t(재생횟수 : \(count))")
         }else{
-            print("음악 제목과 가수를 입력해주세요")
+            print("\n음악 재생 실패 : 음악 제목과 가수를 입력해주세요")
         }
     }
     
@@ -37,6 +37,7 @@ class Music{
         self.init(title : t, artist : a)
         
         if c < 0{
+            print("\n음악 설정 실패 : 들은 횟수는 0보다 작을 수 없습니다")
             return nil
         }
         self.count = c

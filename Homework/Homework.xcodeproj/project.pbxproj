@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F3674301E0B53520076486B /* Playable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F36742F1E0B53520076486B /* Playable.swift */; };
 		7F5D3CD81E0A6C2500C8E124 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D3CD71E0A6C2500C8E124 /* main.swift */; };
 		7F5D3CDF1E0A6C6C00C8E124 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D3CDE1E0A6C6C00C8E124 /* Music.swift */; };
 		7F5D3CE11E0A765400C8E124 /* PlayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D3CE01E0A765400C8E124 /* PlayList.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7F36742F1E0B53520076486B /* Playable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playable.swift; sourceTree = "<group>"; };
 		7F5D3CD41E0A6C2500C8E124 /* Homework */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Homework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F5D3CD71E0A6C2500C8E124 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7F5D3CDE1E0A6C6C00C8E124 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				7F5D3CD71E0A6C2500C8E124 /* main.swift */,
 				7F5D3CDE1E0A6C6C00C8E124 /* Music.swift */,
 				7F5D3CE01E0A765400C8E124 /* PlayList.swift */,
+				7F36742F1E0B53520076486B /* Playable.swift */,
 			);
 			path = Homework;
 			sourceTree = "<group>";
@@ -130,6 +133,7 @@
 				7F5D3CE11E0A765400C8E124 /* PlayList.swift in Sources */,
 				7F5D3CD81E0A6C2500C8E124 /* main.swift in Sources */,
 				7F5D3CDF1E0A6C6C00C8E124 /* Music.swift in Sources */,
+				7F3674301E0B53520076486B /* Playable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +265,7 @@
 				7F5D3CDD1E0A6C2500C8E124 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
