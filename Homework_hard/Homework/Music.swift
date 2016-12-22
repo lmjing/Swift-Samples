@@ -12,6 +12,7 @@ class Music : Playable{
     var title : String?
     var artist : String?
     var count : Int
+    var track : Int?
     
     func play(){
         //콘솔에 제목과 가수 출력, 재생 회수 증가

@@ -33,16 +33,13 @@ let playlist1 = PlayList("발라드")
 try playlist1.addMusic(music1)
 try playlist1.addMusic(music2)
 playlist1.play()
+playlist1.search()
 /*클로저 사용해보기*/
 if let result = playlist1.search("광화문연가"){
-    print("\(result.title) - \(result.artist)")
-}else{
-    
+    result(0,1)
 }
-if playlist1.deleteMusic("광화문연가") == true{
-    print("광화문연가가 성공적으로 삭제되었습니다.")
-}else{
-    print("\n음악 삭제 실패 : 앨범에 추가된 음악이 없습니다. 음악을 추가해주세요.")
+if let result = playlist1.deleteMusic("광화문연가"){
+    result(0)
 }
 try playlist1.addMusic(music2)
 playlist1.play()
@@ -64,18 +61,11 @@ music9.title = "안될걸"
 try playlist2.addMusic(music9)
 
 if let result = playlist2.search("땡땡땡"){
-    print("\(result.title) - \(result.artist)")
-}else{
-    
+    result(0,3)
 }
-if playlist2.deleteMusic("우산") == true{
-    print("광화문연가가 성공적으로 삭제되었습니다.")
-}else{
-    print("\n음악 삭제 실패 : 앨범에 추가된 음악이 없습니다. 음악을 추가해주세요.")
+if let result = playlist2.deleteMusic("우산"){
+    result(0)
 }
 
 playlist2.play()
 
-
-let response = readLine(stripNewline: true)
-print(response) //출력결과: optional("입력한 값")
