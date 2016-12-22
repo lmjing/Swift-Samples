@@ -36,17 +36,6 @@ class PlayList : Playable{
             }else{
                 print("\n음악 등록 실패 : 음악 정보가 정확하지 않습니다.")
             }
-            
-            /*
-            if let m_title = check.title, let m_artist = check.artist{
-                //check.track = playlist.count
-                playlist.append(check)
-                playlist[playlist.count-1].track = playlist.count-1
-                print("\n'\(self.title)'앨범에 '\(m_title) - \(m_artist)'(이)가 추가되었습니다")
-            }else{
-                print("\n음악 등록 실패 : 음악 정보가 정확하지 않습니다.")
-            }
- */
             return
          }
          throw CustomError.M_Set_Fail
@@ -71,24 +60,10 @@ class PlayList : Playable{
                     print("\(i)번 트랙 : \(info)")
                 }
             }
-            /*
-            for i in indexs{
-                print("\(i)번 트랙 : \(playlist[i].title) - \(playlist[i].artist)")
-            }
- */
             return delete
         default:
             return nil
         }
-        /* original
-        if let i = findMusicIndex(title: title){
-            playlist[i].count = 0
-            playlist.remove(at: i)
-            return true
-        }else{
-            return false
-        }
- */
     }
     
     func delete(_ index : Int){
@@ -99,16 +74,6 @@ class PlayList : Playable{
         }else{
             print("\n음악 등록 실패 : 음악 정보가 정확하지 않습니다.")
         }
-
-        /*
-        if let m_title = playlist[index].title, let m_artist = playlist[index].artist{
-            print("\n'\(m_title) - \(m_artist)'를 삭제하였습니다.")
-            playlist[index].count = 0
-            playlist.remove(at: index)
-        }else{
-            print("\n음악 등록 실패 : 음악 정보가 정확하지 않습니다.")
-        }
- */
     }
     
     func search(){
