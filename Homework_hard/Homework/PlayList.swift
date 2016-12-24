@@ -44,8 +44,8 @@ class PlayList : Playable{
     
     /* title에 국한되지 말고 가수까지 검색할 수 있도록 하고 결과 값 여러개 도출되도록 구현 할 것 */
     
-    func deleteMusic(_ title : String) -> ((Int) -> ())? {
-        let indexs = findMusicIndex(title: title)
+    func deleteMusic(title : String? = nil, artist : String? = nil) -> ((Int) -> ())? {
+        let indexs = findMusicIndex(title: title, artist: artist)
         switch indexs.count {
         case 0:
             print("\n음악 삭제 실패 : 해당하는 음악이 앨범에 존재하지 않습니다.")
@@ -54,12 +54,15 @@ class PlayList : Playable{
             delete(indexs[0])
             return nil
         case 2..<playlist.count:
-            print("\n아래의 목록 중 삭제를 원하는 트랙 번호를 입력해주세요")
+            print("\n-------------------------<검색 결과>-------------------------")
+            print("아래의 목록중 삭제를 원하는 트랙의 번호를 입력하세요")
+            print("-----------------------------------------------------------")
             for i in indexs{
                 if let info = getMusicInfo(playlist[i]){
                     print("\(i)번 트랙 : \(info)")
                 }
             }
+            print("-----------------------------------------------------------")
             return delete
         default:
             return nil
@@ -86,8 +89,8 @@ class PlayList : Playable{
         print("------------------------------------------------------")
     }
 
-    func search(_ title : String ) -> ((Int, Int) -> ())? {
-        let indexs = findMusicIndex(title: title)
+    func search(title : String? = nil, artist : String? = nil) -> ((Int, Int) -> ())? {
+        let indexs = findMusicIndex(title: title, artist: artist)
         switch indexs.count {
             case 0:
                 print("\n음악 검색 실패 : 해당하는 음악이 앨범에 존재하지 않습니다.")
@@ -122,11 +125,17 @@ class PlayList : Playable{
         }
     }
     
-    func findMusicIndex(title : String) -> [Int]{
+    func findMusicIndex(title : String?, artist : String?) -> [Int]{
         var result : [Int] = []
         for index in 0..<playlist.count {
-            if playlist[index].title == title{
-                result.append(index)
+            if let t = title, let a = artist{
+                if playlist[index].title == t && playlist[index].artist == a{
+                    result.append(index)
+                }
+            }else{
+                if playlist[index].title == title || playlist[index].artist == artist{
+                    result.append(index)
+                }
             }
         }
         return result
